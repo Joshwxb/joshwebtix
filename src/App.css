@@ -65,22 +65,35 @@ body {
 }
 
 .brand-logo {
+.brand-logo {
   color: #0f172a;
-  font-size: 25px;
+  font-size: 20px; /* Reduced from 25px for a cleaner look */
   font-weight: 800;
   letter-spacing: -1.2px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  gap: 8px; /* Adds clean spacing if you have both icon/img and text */
   flex-shrink: 0;
 }
 
 .brand-logo img {
   display: block;
   width: auto;
-  height: 10px;
-  max-width: 200px;
+  height: 32px; /* Increased from 10px so the logo is crisp and visible */
+  max-width: 150px; /* Scaled down max-width */
   object-fit: contain;
+}
+
+/* Compact logo size for mobile screens */
+@media (max-width: 600px) {
+  .brand-logo {
+    font-size: 18px;
+  }
+
+  .brand-logo img {
+    height: 26px;
+  }
 }
 
 .desktop-nav {
@@ -242,128 +255,111 @@ body {
 /* ==========================================================
    HERO SECTION — bb.jpeg AS BACKGROUND IMAGE
    ========================================================== */
+/* Hero Dark Section with Background Image */
 .hero-biz-section {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  /* Setting bb.jpeg as background with dark gradient overlay for text readability */
-  background: linear-gradient(
-      90deg,
-      rgba(3, 11, 24, 0.92) 0%,
-      rgba(7, 22, 48, 0.85) 55%,
-      rgba(11, 31, 68, 0.5) 100%
-    ),
-    url('/bb.jpeg') center/cover no-repeat;
-  color: #ffffff;
-  padding: 90px 24px;
-  overflow: hidden;
-}
-
-.hero-biz-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1180px;
-  margin: 0 auto;
-  align-items: center;
   width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-eyebrow-text {
-  color: #38bdf8;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.rating-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 8px 18px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 13px;
-  margin-bottom: 24px;
-}
-
-.rating-score { font-weight: 700; color: #ffffff; }
-.rating-stars { color: #38bdf8; }
-.rating-text { color: #94a3b8; }
-
-.hero-biz-title {
-  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1.2px;
-  margin: 0 0 20px 0;
-  color: #ffffff;
-}
-
-.highlight-blue { color: #38bdf8; }
-
-.hero-biz-description {
-  color: #cbd5e1;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 530px;
-  margin-bottom: 36px;
-}
-
-.hero-biz-actions {
+  min-height: 80vh;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.btn-hero-primary,
-.btn-hero-secondary {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  height: 50px;
-  padding: 0 28px;
-  border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  padding: 120px 24px 80px;
+  text-align: center;
+  background-image: linear-gradient(
+      180deg,
+      rgba(3, 11, 24, 0.92) 0%,
+      rgba(7, 22, 48, 0.88) 100%
+    ),
+    url('/bb.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-biz-section .hero-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin: 16px 0 20px;
+}
+
+.hero-biz-section .hero-description {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+/* Side-by-Side Buttons for Desktop & Mobile */
+.hero-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-weight: 600;
-  letter-spacing: 0.2px;
+  font-size: 14px;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
-.btn-hero-primary {
-  background: #1764f5;
-  color: #ffffff !important;
-  border: 1px solid #38bdf8;
-  box-shadow: 0 8px 25px rgba(23, 100, 245, 0.4);
+.btn-primary:hover {
+  background-color: #1d4ed8;
 }
 
-.btn-hero-primary:hover {
-  background: #1253d1;
-  transform: translateY(-3px);
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
-.btn-hero-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-3px);
+/* Mobile Screen Adjustments */
+@media (max-width: 600px) {
+  .hero-biz-section {
+    padding: 100px 16px 60px;
+    min-height: auto;
+  }
+
+  .hero-btn-group {
+    gap: 8px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 12px;
+    font-size: 12.5px;
+    flex: 1;
+    text-align: center;
+  }
 }
+  
 
 /* Hide extra right visual element since bb.jpeg is now the background container */
 .hero-biz-visual {
