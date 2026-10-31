@@ -90,7 +90,7 @@ function App() {
       <header className="site-header">
         <nav className="navbar">
           <a href="#home" className="brand-logo" aria-label="Joshwebtix Home">
-            <img src="/ll.png" alt="Joshwebtix" />
+            <img src="/l2.jpg" alt="Joshwebtix" />
           </a>
 
           <div className="desktop-nav">
