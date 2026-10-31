@@ -376,14 +376,34 @@ body {
     text-align: left;
   }
   .hero-biz-section {
-    background: linear-gradient(
-        180deg,
-        rgba(3, 11, 24, 0.92) 0%,
-        rgba(7, 22, 48, 0.88) 100%
-      ),
-      url('/bb.jpeg') center/cover no-repeat;
-  }
+  position: relative;
+  padding: 140px 24px 100px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(
+      180deg,
+      rgba(3, 11, 24, 0.92) 0%,
+      rgba(7, 22, 48, 0.88) 100%
+    ),
+    url('/bb.jpeg') center / cover no-repeat;
+  color: #ffffff; /* Ensures default text inside is white */
 }
+
+/* Make sure text elements inside the dark hero pop out clearly */
+.hero-biz-section .hero-title {
+  color: #ffffff;
+}
+
+.hero-biz-section .hero-description {
+  color: #cbd5e1; /* Soft light gray for readability */
+}
+  
+  /* Add your background image here (replace 'hero-bg.jpg' with your actual image filename in public folder) */
+  background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.95)), 
+              url('/hero-bb.jpeg') center / cover no-repeat;
+}
+
 
 /* Common Section Headings */
 .section-heading {
