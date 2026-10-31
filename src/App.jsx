@@ -145,37 +145,29 @@ function App() {
 
       <main>
         {/* HERO SECTION — FULL WIDTH BACKGROUND DESIGN */}
-        <section id="home" className="hero-biz-section hero-full-bg">
-          <div className="hero-biz-container hero-centered">
-            <div className="hero-biz-content">
-              <div className="rating-pill floating-badge">
-                <span className="rating-score">4.9</span>
-                <span className="rating-stars">★★★★★</span>
-                <span className="rating-text">5K+ Reviews &amp; Client Trust</span>
-              </div>
+        
+        <section className="hero-section">
+  <div className="hero-content">
+    <span className="section-eyebrow">DIGITAL AGENCY</span>
+    <h1 className="hero-title">
+      Your business deserves a <span className="highlight-blue">stronger online presence.</span>
+    </h1>
+    <p className="hero-description">
+      We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
+    </p>
 
-              <h1 className="hero-biz-title">
-                Your business deserves <span className="highlight-blue">a stronger online presence.</span>
-                <br />
-                
-              </h1>
-
-              <p className="hero-biz-description">
-                We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
-              </p>
-
-              <div className="hero-biz-actions">
-                <a href="#contact" className="btn-hero-primary">
-                  Get Your Website
-                </a>
-                <a href="#portfolio" className="btn-hero-secondary">
-                  Explore Our Work
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
+    {/* Side-by-side buttons for mobile and desktop */}
+    <div className="hero-btn-group">
+      <a href="#contact" className="btn-primary">
+        Get Your Website
+      </a>
+      <a href="#portfolio" className="btn-secondary">
+        Explore Our Work
+      </a>
+    </div>
+  </div>
+</section>
+        
         {/* SERVICES */}
         <section id="services" className="services-section scroll-reveal">
           <div className="section-heading">
