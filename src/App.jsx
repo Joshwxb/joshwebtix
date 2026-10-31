@@ -146,7 +146,7 @@ function App() {
       <main>
         {/* HERO SECTION — FULL WIDTH BACKGROUND DESIGN */}
         
-        <section className="hero-section">
+        <section className="hero-biz-section">
   <div className="hero-content">
     <span className="section-eyebrow">DIGITAL AGENCY</span>
     <h1 className="hero-title">
@@ -156,7 +156,6 @@ function App() {
       We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
     </p>
 
-    {/* Side-by-side buttons for mobile and desktop */}
     <div className="hero-btn-group">
       <a href="#contact" className="btn-primary">
         Get Your Website
