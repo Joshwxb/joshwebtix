@@ -307,71 +307,62 @@ body {
 .rating-stars { color: #38bdf8; }
 .rating-text { color: #94a3b8; }
 
-.hero-biz-title {
-  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1.2px;
-  margin: 0 0 20px 0;
-  color: #ffffff;
+/* Hero Content & Text Left Alignment on Desktop */
+.hero-biz-content {
+  text-align: left;
+  max-width: 700px; /* Keeps line length comfortable for reading */
+  margin: 0;        /* Removes auto centering so it starts from the left */
 }
 
-.highlight-blue { color: #38bdf8; }
-
-.hero-biz-description {
-  color: #cbd5e1;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 530px;
-  margin-bottom: 36px;
-}
-
+/* Align buttons to the left on laptop/desktop */
 .hero-biz-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: flex-start; /* Aligns buttons to the left matching the text */
+  gap: 14px;
+  flex-wrap: nowrap;
+  margin-top: 28px;
 }
 
-.btn-hero-primary,
-.btn-hero-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 50px;
-  padding: 0 28px;
-  border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+/* Primary Button - Rounded Pill Design */
 .btn-hero-primary {
-  background: #1764f5;
-  color: #ffffff !important;
-  border: 1px solid #38bdf8;
-  box-shadow: 0 8px 25px rgba(23, 100, 245, 0.4);
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  transition: all 0.25s ease;
 }
 
 .btn-hero-primary:hover {
-  background: #1253d1;
-  transform: translateY(-3px);
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
 }
 
+/* Secondary Button - Glassmorphism Outer Border Rounded Pill */
 .btn-hero-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transition: all 0.25s ease;
 }
 
 .btn-hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
 }
 
 /* Mobile Screen Formatting (Optional: Keep centered on mobile if desired) */
@@ -380,16 +371,22 @@ body {
     text-align: center; /* Keeps mobile centered for a clean mobile look */
     margin: 0 auto;
   }
-  .hero-biz-section {
-    background: linear-gradient(
-        180deg,
-        rgba(3, 11, 24, 0.92) 0%,
-        rgba(7, 22, 48, 0.88) 100%
-      ),
-      url('/bb.jpeg') center/cover no-repeat;
+
+  .hero-biz-actions {
+    justify-content: center; /* Centers buttons back on mobile */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 9999px;
   }
 }
-
 /* Common Section Headings */
 .section-heading {
   max-width: 650px;
