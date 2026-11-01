@@ -281,125 +281,114 @@ body {
   margin: 0 auto;
 }
 
-.hero-biz-section .hero-title {
-  font-size: clamp(32px, 5vw, 56px);
+.hero-eyebrow-text {
+  color: #38bdf8;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.rating-score { font-weight: 700; color: #ffffff; }
+.rating-stars { color: #38bdf8; }
+.rating-text { color: #94a3b8; }
+
+.hero-biz-title {
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -1px;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  margin: 0 0 20px 0;
   color: #ffffff;
-  margin: 16px 0 20px;
 }
 
-.hero-biz-section .hero-description {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.6;
+.highlight-blue { color: #38bdf8; }
+
+.hero-biz-description {
   color: #cbd5e1;
-  max-width: 680px;
-  margin: 0 auto 36px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 530px;
+  margin-bottom: 36px;
 }
 
-/* Side-by-Side Buttons for Desktop & Mobile */
-.hero-btn-group {
+.hero-biz-actions {
   display: flex;
   align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-}
-
-.btn-primary {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
+  gap: 10px;
+  height: 50px;
+  padding: 0 28px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-}
-
-.btn-secondary {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 8px;
   font-weight: 600;
-  font-size: 14px;
+  letter-spacing: 0.2px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.btn-hero-primary {
+  background: #1764f5;
+  color: #ffffff !important;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 8px 25px rgba(23, 100, 245, 0.4);
 }
 
-/* Mobile Screen Adjustments */
-@media (max-width: 600px) {
-  .hero-biz-section {
-    padding: 100px 16px 60px;
-    min-height: auto;
-  }
-
-  .hero-btn-group {
-    gap: 8px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 10px 12px;
-    font-size: 12.5px;
-    flex: 1;
-    text-align: center;
-  }
-}
-  
-
-/* Hide extra right visual element since bb.jpeg is now the background container */
-.hero-biz-visual {
-  display: none;
+.btn-hero-primary:hover {
+  background: #1253d1;
+  transform: translateY(-3px);
 }
 
-@media (max-width: 960px) {
-  .hero-biz-container {
-    grid-template-columns: 1fr;
-    text-align: left;
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Mobile Screen Formatting (Optional: Keep centered on mobile if desired) */
+@media (max-width: 768px) {
+  .hero-biz-content {
+    text-align: center; /* Keeps mobile centered for a clean mobile look */
+    margin: 0 auto;
   }
   .hero-biz-section {
-  position: relative;
-  padding: 140px 24px 100px;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: linear-gradient(
-      180deg,
-      rgba(3, 11, 24, 0.92) 0%,
-      rgba(7, 22, 48, 0.88) 100%
-    ),
-    url('/bb.jpeg') center / cover no-repeat;
-  color: #ffffff; /* Ensures default text inside is white */
+    background: linear-gradient(
+        180deg,
+        rgba(3, 11, 24, 0.92) 0%,
+        rgba(7, 22, 48, 0.88) 100%
+      ),
+      url('/bb.jpeg') center/cover no-repeat;
+  }
 }
-
-/* Make sure text elements inside the dark hero pop out clearly */
-.hero-biz-section .hero-title {
-  color: #ffffff;
-}
-
-.hero-biz-section .hero-description {
-  color: #cbd5e1; /* Soft light gray for readability */
-}
-  
-  /* Add your background image here (replace 'hero-bg.jpg' with your actual image filename in public folder) */
-  background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.95)), 
-              url('/hero-bb.jpeg') center / cover no-repeat;
-}
-
 
 /* Common Section Headings */
 .section-heading {
@@ -1505,93 +1494,5 @@ body {
   }
   .testimonials-scroll-track {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Hero Section Styles */
-.hero-section {
-  padding: 120px 24px 80px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero-title {
-  font-size: clamp(32px, 5vw, 56px);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  color: #0f172a;
-  margin-bottom: 20px;
-}
-
-.hero-description {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.6;
-  color: #475569;
-  max-width: 680px;
-  margin: 0 auto 36px;
-}
-
-/* Side-by-side Button Container */
-.hero-btn-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: nowrap; /* Keeps buttons on the same row */
-}
-
-/* Primary Button Styling */
-.btn-primary {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-}
-
-/* Secondary Button Styling */
-.btn-secondary {
-  background-color: #f1f5f9;
-  color: #0f172a;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  border: 1px solid #cbd5e1;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-}
-
-.btn-secondary:hover {
-  background-color: #e2e8f0;
-}
-
-/* Mobile Specific Responsiveness */
-@media (max-width: 600px) {
-  .hero-section {
-    padding: 90px 16px 50px;
-  }
-
-  .hero-btn-group {
-    gap: 8px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 10px 14px;
-    font-size: 12.5px; /* Slightly smaller text for compact screens */
-    flex: 1; /* Distributes width evenly on smaller screens */
-    text-align: center;
   }
 }
