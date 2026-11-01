@@ -269,14 +269,23 @@ function App() {
   <div className="about-redesign-container">
     <div className="about-left-col">
       {/* Added less-bold-heading to eyebrow and heading */}
-      <span className="section-eyebrow less-bold-heading">ABOUT JOSHWEBTIX</span>
-      <h2 className="less-bold-heading">We build websites that turn visitors into long-term clients.</h2>
+      <span className="section-eyebrow less-bold-heading">ABOUT US</span>
+      <h2 className="less-bold-heading">We build websites that make it easier for people to choose your business.</h2>
       <p>
         Joshwebtix is a specialized web design and development brand dedicated to engineering modern, conversion-focused websites and web applications. We blend performance-driven software engineering with clean, accessible visual architecture.
       </p>
-      <p>
-        Whether you are a growing business seeking higher search market visibility or an executive requiring a distinguished online portfolio, we deliver tailored technical solutions without fluff or unnecessary bloat.
-      </p>
+     <p className="about-text-description">
+  Whether you are a growing business seeking higher search market visibility or an executive requiring a distinguished online portfolio, we deliver tailored technical solutions without fluff or unnecessary bloat. Website designed &amp; developed by{' '}
+  <a 
+    href="https://josh-wxb.vercel.app" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="developer-link"
+  >
+    Joshua Olawoore
+  </a>.
+</p>
+
 
       <div className="about-stats-grid">
         <div className="stat-box">
@@ -291,7 +300,7 @@ function App() {
     </div>
 
     <div className="about-right-card animate-card-hover">
-      <h3>Why Choose Joshwebtix?</h3>
+      <h3>Why Choose Us?</h3>
       <ul>
         <li>
           <i className="fa-regular fa-circle-check" />
@@ -318,40 +327,43 @@ function App() {
   <div className="testimonials-dark-container">
     {/* LEFT COLUMN: Title & Navigation */}
     <div className="testimonials-left-col">
-  <div className="quote-icon-large">
-    <i className="fa-solid fa-quote-left" />
-  </div>
-  <h2 className="testimonials-main-title">
-    What our <br />
-    customers are <br />
-    <span className="highlight-blue">saying</span>
-  </h2>
-  
-  {/* Navigation as shown in your image */}
-  <div className="testimonials-slider-nav">
-    <button type="button" aria-label="Previous slide" className="t-nav-btn">
-      <i className="fa-solid fa-arrow-left" />
-    </button>
-    <div className="t-nav-pagination">
-      <span className="t-dash active" />
-      <span className="t-dash" />
+      <div className="quote-icon-large">
+        <i className="fa-solid fa-quote-left" />
+      </div>
+      <h2 className="testimonials-main-title">
+        What our <br />
+        customers are <br />
+        <span className="highlight-blue">saying</span>
+      </h2>
+      
+      {/* Navigation */}
+      <div className="testimonials-slider-nav">
+        <button type="button" aria-label="Previous slide" className="t-nav-btn">
+          <i className="fa-solid fa-arrow-left" />
+        </button>
+        <div className="t-nav-pagination">
+          <span className="t-dash active" />
+          <span className="t-dash" />
+        </div>
+        <button type="button" aria-label="Next slide" className="t-nav-btn">
+          <i className="fa-solid fa-arrow-right" />
+        </button>
+      </div>
     </div>
-    <button type="button" aria-label="Next slide" className="t-nav-btn">
-      <i className="fa-solid fa-arrow-right" />
-    </button>
-  </div>
-</div>
 
     {/* RIGHT COLUMN: Speech Bubble Cards */}
     <div className="testimonials-right-col">
       <div className="testimonials-scroll-track">
+        
+        {/* Testimonial 1 */}
         <article className="speech-bubble-card animate-card-hover">
           <p className="bubble-quote">
             &ldquo;The redesign process was seamless. Since launching the new website, our conversion rates have jumped by 40%. The performance and speed are simply top-notch.&rdquo;
           </p>
           <div className="bubble-stars">★★★★★</div>
           <div className="bubble-author">
-            <div className="bubble-avatar sam-avatar"></div>
+            {/* Replaced avatar div with an image tag */}
+            <img src="/so.jpg" alt="Sam O." className="bubble-avatar-img" />
             <div>
               <strong>Sam O.</strong>
               <small>MARKETING DIRECTOR</small>
@@ -359,19 +371,22 @@ function App() {
           </div>
         </article>
 
+        {/* Testimonial 2 */}
         <article className="speech-bubble-card animate-card-hover">
           <p className="bubble-quote">
             &ldquo;My bro I must confess the whole design and set up the website is good and powerful. This is my first time working with you and I enjoyed it because you barely complained.&rdquo;
           </p>
           <div className="bubble-stars">★★★★★</div>
           <div className="bubble-author">
-            <div className="bubble-avatar pnation-avatar"></div>
+            {/* Replaced avatar div with an image tag */}
+            <img src="/ph.jpg" alt="Pnation Hub" className="bubble-avatar-img" />
             <div>
               <strong>Pnation Hub</strong>
               <small>SALES EXPERT</small>
             </div>
           </div>
         </article>
+
       </div>
     </div>
   </div>
@@ -379,102 +394,105 @@ function App() {
 
         {/* PRICING */}
         <section id="pricing" className="pricing-redesign-section scroll-reveal">
-          <div className="section-heading">
-            <div className="currency-toggle">
-              <button
-                type="button"
-                className={currency === 'USD' ? 'active-curr' : ''}
-                onClick={() => setCurrency('USD')}
-              >
-                USD ($)
-              </button>
-              <button
-                type="button"
-                className={currency === 'NGN' ? 'active-curr' : ''}
-                onClick={() => setCurrency('NGN')}
-              >
-                NGN (₦)
-              </button>
-            </div>
-            <h2>Simple &amp; Predictable Pricing</h2>
-            <p>Invest in your online presence with professional tiers tailored to your scale.</p>
-          </div>
+  <div className="section-heading">
+    <div className="currency-toggle">
+      <button
+        type="button"
+        className={currency === 'USD' ? 'active-curr' : ''}
+        onClick={() => setCurrency('USD')}
+      >
+        USD ($)
+      </button>
+      <button
+        type="button"
+        className={currency === 'NGN' ? 'active-curr' : ''}
+        onClick={() => setCurrency('NGN')}
+      >
+        NGN (₦)
+      </button>
+    </div>
+    <h2>Simple &amp; Predictable Pricing</h2>
+    <p>Invest in your online presence with professional tiers tailored to your scale.</p>
+  </div>
 
-          <div className="pricing-grid">
-            <article className="pricing-card animate-card-hover">
-              <span className="pkg-badge">Starter Site</span>
-              <h3>Essential Presence</h3>
-              <p className="pricing-description">
-                Perfect for small businesses and personal portfolios needing a clean launch.
-              </p>
-              <div className="price-tag">
-                {currency === 'USD' ? '$300' : '₦450,000'} <span>/ one-time</span>
-              </div>
-              <div className="price-divider" />
+  <div className="pricing-grid">
+    {/* Starter Plan */}
+    <article className="pricing-card animate-card-hover">
+      <span className="pkg-badge">Starter Site</span>
+      <h3>Essential Presence</h3>
+      <p className="pricing-description">
+        Perfect for small businesses and personal portfolios needing a clean, fast launch.
+      </p>
+      <div className="price-tag">
+        {currency === 'USD' ? '$120' : '₦180,000'} <span>/ one-time</span>
+      </div>
+      <div className="price-divider" />
 
-              <ul>
-                <li><i className="fa-solid fa-check" /> 1–3 Custom Page Layouts</li>
-                <li><i className="fa-solid fa-check" /> 100% Mobile Responsive</li>
-                <li><i className="fa-solid fa-check" /> Contact Form Integration</li>
-                <li><i className="fa-solid fa-check" /> Basic SEO Optimization</li>
-                <li className="disabled-feature"><i className="fa-solid fa-xmark" /> Custom Web Application Logic</li>
-              </ul>
+      <ul>
+        <li><i className="fa-solid fa-check" /> 1–3 Custom Page Layouts</li>
+        <li><i className="fa-solid fa-check" /> 100% Mobile Responsive</li>
+        <li><i className="fa-solid fa-check" /> WhatsApp Contact Integration</li>
+        <li><i className="fa-solid fa-check" /> Basic SEO Optimization</li>
+        <li className="disabled-feature"><i className="fa-solid fa-xmark" /> Advanced Web App Logic</li>
+      </ul>
 
-              <a href="#contact" className="pkg-btn secondary-pkg-btn">
-                Select Starter Plan
-              </a>
-            </article>
+      <a href="https://wa.me/2347038943310?text=Hello%2C%20I%20am%20interested%20in%20the%20Essential%20Presence%20Starter%20Plan" target="_blank" rel="noopener noreferrer" className="pkg-btn secondary-pkg-btn">
+        Select Starter Plan
+      </a>
+    </article>
 
-            <article className="pricing-card pricing-featured animate-card-hover">
-              <div className="most-popular-pill">MOST POPULAR</div>
-              <span className="pkg-badge">Growth Package</span>
-              <h3>Professional Growth</h3>
-              <p className="pricing-description">
-                Comprehensive solution for established brands looking to drive leads online.
-              </p>
-              <div className="price-tag">
-                {currency === 'USD' ? '$750' : '₦1,150,000'} <span>/ one-time</span>
-              </div>
-              <div className="price-divider" />
+    {/* Growth Package (Most Popular) */}
+    <article className="pricing-card pricing-featured animate-card-hover">
+      <div className="most-popular-pill">MOST POPULAR</div>
+      <span className="pkg-badge">Growth Package</span>
+      <h3>Professional Growth</h3>
+      <p className="pricing-description">
+        Comprehensive solution for established brands looking to drive leads and sales online.
+      </p>
+      <div className="price-tag">
+        {currency === 'USD' ? '$280' : '₦450,000'} <span>/ one-time</span>
+      </div>
+      <div className="price-divider" />
 
-              <ul>
-                <li><i className="fa-solid fa-check" /> Up to 7 Custom Designed Pages</li>
-                <li><i className="fa-solid fa-check" /> Full Content Management System (CMS)</li>
-                <li><i className="fa-solid fa-check" /> Advanced Speed &amp; Technical SEO</li>
-                <li><i className="fa-solid fa-check" /> Interactive Project Showcases</li>
-                <li><i className="fa-solid fa-check" /> 30 Days Post-Launch Maintenance</li>
-              </ul>
+      <ul>
+        <li><i className="fa-solid fa-check" /> Up to 6 Custom Designed Pages</li>
+        <li><i className="fa-solid fa-check" /> Modern Animations &amp; UI Styling</li>
+        <li><i className="fa-solid fa-check" /> Advanced Speed &amp; Technical SEO</li>
+        <li><i className="fa-solid fa-check" /> Interactive Portfolio &amp; Services</li>
+        <li><i className="fa-solid fa-check" /> 30 Days Post-Launch Support</li>
+      </ul>
 
-              <a href="#contact" className="pkg-btn primary-pkg-btn">
-                Select Growth Plan
-              </a>
-            </article>
+      <a href="https://wa.me/2347038943310?text=Hello%2C%20I%20am%20interested%20in%20the%20Professional%20Growth%20Package" target="_blank" rel="noopener noreferrer" className="pkg-btn primary-pkg-btn">
+        Select Growth Plan
+      </a>
+    </article>
 
-            <article className="pricing-card animate-card-hover">
-              <span className="pkg-badge">Custom Web App</span>
-              <h3>Enterprise Custom</h3>
-              <p className="pricing-description">
-                Tailored web platforms, custom SaaS dashboards, and complex digital builds.
-              </p>
-              <div className="price-tag">
-                {currency === 'USD' ? '$1,500+' : '₦2,300,000+'} <span>/ custom quote</span>
-              </div>
-              <div className="price-divider" />
+    {/* Custom Enterprise */}
+    <article className="pricing-card animate-card-hover">
+      <span className="pkg-badge">Custom Web App</span>
+      <h3>Enterprise Custom</h3>
+      <p className="pricing-description">
+        Tailored web applications, e-commerce stores, and complex digital platforms.
+      </p>
+      <div className="price-tag">
+        {currency === 'USD' ? '$500+' : '₦850,000+'} <span>/ custom quote</span>
+      </div>
+      <div className="price-divider" />
 
-              <ul>
-                <li><i className="fa-solid fa-check" /> Full-Stack Web Application Architecture</li>
-                <li><i className="fa-solid fa-check" /> Database &amp; Third-party API Integrations</li>
-                <li><i className="fa-solid fa-check" /> Custom User Portals &amp; Dashboards</li>
-                <li><i className="fa-solid fa-check" /> Priority SLA Technical Support</li>
-                <li><i className="fa-solid fa-check" /> Continuous Security Optimization</li>
-              </ul>
+      <ul>
+        <li><i className="fa-solid fa-check" /> Full-Stack Web App Architecture</li>
+        <li><i className="fa-solid fa-check" /> E-commerce / Payment Integration</li>
+        <li><i className="fa-solid fa-check" /> Custom User Portals &amp; Dashboards</li>
+        <li><i className="fa-solid fa-check" /> Priority WhatsApp Support</li>
+        <li><i className="fa-solid fa-check" /> High-Performance Optimization</li>
+      </ul>
 
-              <a href="#contact" className="pkg-btn secondary-pkg-btn">
-                Request Enterprise Quote
-              </a>
-            </article>
-          </div>
-        </section>
+      <a href="https://wa.me/2347038943310?text=Hello%2C%20I%20would%20like%20a%20custom%20quote%20for%20an%20Enterprise%20Web%20App" target="_blank" rel="noopener noreferrer" className="pkg-btn secondary-pkg-btn">
+        Request Custom Quote
+      </a>
+    </article>
+  </div>
+</section>
 
         {/* CONTACT SECTION */}
         {/* CONTACT SECTION */}
@@ -493,7 +511,7 @@ function App() {
           <span className="ci-icon"><i className="fa-regular fa-envelope" /></span>
           <div>
             <small>DIRECT EMAIL</small>
-            <strong>contact@joshwebtix.com</strong>
+            <strong>olawoore589@gmail.com</strong>
           </div>
         </div>
 
@@ -568,34 +586,38 @@ function App() {
 </section>
       </main>
 
-      {/* FOOTER */}
-      <footer className="footer-redesign">
-        <div className="footer-redesign-container">
-          <div className="footer-col-main">
-            <h3>Joshwebtix</h3>
-            <p>
-              Joshwebtix builds high-performing, custom websites and web applications designed to elevate modern brands online.
-            </p>
-            <p className="footer-copy">© 2026 Joshwebtix. All rights reserved.</p>
-          </div>
+     {/* FOOTER */}
+<footer className="footer-redesign">
+  <div className="footer-redesign-container">
+    <div className="footer-col-main">
+      {/* Unbolded White Brand Title */}
+      <a href="#home" className="footer-brand-link">
+        <span className="footer-brand-title">Joshwebtix</span>
+      </a>
 
-          <div className="footer-col-links">
-            <h4>QUICK NAVIGATION</h4>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Projects Portfolio</a>
-            <a href="#about">About Joshwebtix</a>
-            <a href="#pricing">Pricing Plans</a>
-          </div>
+      <p>
+        Joshwebtix builds high-performing, custom websites and web applications designed to elevate modern brands online.
+      </p>
+      <p className="footer-copy">© 2026 Joshwebtix. All rights reserved.</p>
+    </div>
 
-          <div className="footer-col-links">
-            <h4>LEGAL &amp; SUPPORT</h4>
-            <a href="#contact">Contact Us</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-          </div>
-        </div>
-      </footer>
+    <div className="footer-col-links">
+      <h4>QUICK NAVIGATION</h4>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Projects Portfolio</a>
+      <a href="#about">About Joshwebtix</a>
+      <a href="#pricing">Pricing Plans</a>
+    </div>
+
+    <div className="footer-col-links">
+      <h4>LEGAL &amp; SUPPORT</h4>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>
     </>
   );
 }

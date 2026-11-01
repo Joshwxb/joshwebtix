@@ -1746,3 +1746,29 @@ body {
     white-space: nowrap;
   }
 }
+.bubble-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+/* Footer Unbolded White Brand Text Styling */
+.footer-brand-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-brand-title {
+  font-size: 24px;
+  font-weight: 400 !important; /* Unbolded weight */
+  color: #ffffff !important;   /* Crisp white color */
+  letter-spacing: -0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-brand-title:hover {
+  opacity: 0.85;
+}
