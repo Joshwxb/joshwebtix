@@ -90,7 +90,7 @@ function App() {
       <header className="site-header">
         <nav className="navbar">
           <a href="#home" className="brand-logo" aria-label="Joshwebtix Home">
-            <img src="/ll.png" alt="Joshwebtix" />
+            <img src="/22.jpg" alt="Joshwebtix" />
           </a>
 
           <div className="desktop-nav">
@@ -146,35 +146,33 @@ function App() {
       <main>
         {/* HERO SECTION — FULL WIDTH BACKGROUND DESIGN */}
         <section id="home" className="hero-biz-section hero-full-bg">
-          <div className="hero-biz-container hero-centered">
-            <div className="hero-biz-content">
-              <div className="rating-pill floating-badge">
-                <span className="rating-score">4.9</span>
-                <span className="rating-stars">★★★★★</span>
-                <span className="rating-text">5K+ Reviews &amp; Client Trust</span>
-              </div>
+  <div className="hero-biz-container hero-centered">
+    <div className="hero-biz-content">
+      <div className="rating-pill floating-badge">
+        <span className="rating-score">4.9</span>
+        <span className="rating-stars">★★★★★</span>
+        <span className="rating-text">5K+ Reviews &amp; Client Trust</span>
+      </div>
 
-              <h1 className="hero-biz-title">
-                Your business deserves <span className="highlight-blue">a stronger online presence.</span>
-                <br />
-                
-              </h1>
+      <h1 className="hero-biz-title">
+        Your business deserves <span className="highlight-blue">a stronger online presence.</span>
+      </h1>
 
-              <p className="hero-biz-description">
-                We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
-              </p>
+      <p className="hero-biz-description">
+        We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
+      </p>
 
-              <div className="hero-biz-actions">
-                <a href="#contact" className="btn-hero-primary">
-                  Get Your Website
-                </a>
-                <a href="#portfolio" className="btn-hero-secondary">
-                  Explore Our Work
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="hero-biz-actions">
+        <a href="#contact" className="btn-hero-primary">
+          Get Your Website
+        </a>
+        <a href="#portfolio" className="btn-hero-secondary">
+          Explore Our Work
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* SERVICES */}
         <section id="services" className="services-section scroll-reveal">
@@ -235,6 +233,7 @@ function App() {
   </div>
 
   <div className="portfolio-grid">
+    {/* Project 1: TFOOD */}
     <article className="portfolio-card animate-card-hover">
       <div 
         className="portfolio-card-image"
@@ -245,12 +244,18 @@ function App() {
         <p>
           A premium food platform with easy-to-use menus, smooth online ordering, and a vibrant, food-focused design.
         </p>
-        <a href="#contact" className="portfolio-details-btn">
+        <a 
+          href="https://tfood-ten.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="portfolio-details-btn"
+        >
           View Website <i className="fa-solid fa-arrow-up-right-from-square" />
         </a>
       </div>
     </article>
 
+    {/* Project 2: NCT TRAVELS */}
     <article className="portfolio-card animate-card-hover">
       <div 
         className="portfolio-card-image"
@@ -261,12 +266,18 @@ function App() {
         <p>
           A visa website providing fast, reliable, and seamless visa processing services.
         </p>
-        <a href="#contact" className="portfolio-details-btn">
+        <a 
+          href="https://nct-travels.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="portfolio-details-btn"
+        >
           View Website <i className="fa-solid fa-arrow-up-right-from-square" />
         </a>
       </div>
     </article>
 
+    {/* Project 3: CEDAG FOUNDATION */}
     <article className="portfolio-card animate-card-hover">
       <div 
         className="portfolio-card-image"
@@ -277,7 +288,12 @@ function App() {
         <p>
           A website for a foundation focused on community growth, social impact, and educational support.
         </p>
-        <a href="#contact" className="portfolio-details-btn">
+        <a 
+          href="https://cedag-foundation.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="portfolio-details-btn"
+        >
           View Website <i className="fa-solid fa-arrow-up-right-from-square" />
         </a>
       </div>
