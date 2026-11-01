@@ -145,82 +145,45 @@ function App() {
 
       <main>
         {/* HERO SECTION — FULL WIDTH BACKGROUND DESIGN */}
-        <section id="home" className="hero-biz-section hero-full-bg">
-  <div className="hero-biz-container hero-centered">
-    <div className="hero-biz-content">
-      <div className="rating-pill floating-badge">
-        <span className="rating-score">4.9</span>
-        <span className="rating-stars">★★★★★</span>
+        {/* Hero Section */}
+<section id="home" className="hero-dark-grid">
+  <div className="hero-grid-overlay"></div>
+  
+  <div className="hero-container">
+    <div className="hero-content">
+      {/* 5-Star Pill Badge */}
+      <div className="hero-rating-badge">
+        <span className="stars">★★★★★</span>
         <span className="rating-text">5K+ Reviews &amp; Client Trust</span>
       </div>
 
-      <h1 className="hero-biz-title">
-        Your business deserves <span className="highlight-blue">a stronger online presence.</span>
+      {/* Main Heading */}
+      <h1 className="hero-heading">
+        Your business deserves <span className="highlight-text">a stronger online presence.</span>
       </h1>
 
-      <p className="hero-biz-description">
-        We build professional websites and web applications that help businesses earn trust, showcase their services, and turn visitors into customers.
+      {/* Subtitle */}
+      <p className="hero-subtext">
+        We build fast, secure web apps and websites that earn customer trust and turn visitors into paying customers.
       </p>
 
-      <div className="hero-biz-actions">
-        <a href="#contact" className="btn-hero-primary">
+      {/* CTA Buttons */}
+      <div className="hero-actions">
+        <a 
+          href="https://wa.me/2347038943310" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-primary-pill"
+        >
           Get Your Website
         </a>
-        <a href="#portfolio" className="btn-hero-secondary">
+        <a href="#portfolio" className="btn-secondary-pill">
           Explore Our Work
         </a>
       </div>
     </div>
   </div>
 </section>
-
-        {/* SERVICES */}
-        <section id="services" className="services-section scroll-reveal">
-          <div className="section-heading">
-            <span className="section-eyebrow">WHAT WE DO</span>
-            <h2>Digital solutions for your business.</h2>
-            <p>
-              Everything you need to establish a professional online presence
-              and give your customers a better experience.
-            </p>
-          </div>
-
-          <div className="services-grid">
-            <article className="service-card animate-card-hover">
-              <div className="service-icon">
-                <i className="fa-solid fa-laptop-code" />
-              </div>
-              <h3>Business Website Development</h3>
-              <p>
-                Professional websites that showcase your business, build trust,
-                and help customers understand your services.
-              </p>
-            </article>
-
-            <article className="service-card animate-card-hover">
-              <div className="service-icon">
-                <i className="fa-solid fa-cart-shopping" />
-              </div>
-              <h3>E-commerce Websites</h3>
-              <p>
-                Online stores that present your products clearly and make it
-                easier for customers to explore what you sell.
-              </p>
-            </article>
-
-            <article className="service-card animate-card-hover">
-              <div className="service-icon">
-                <i className="fa-solid fa-layer-group" />
-              </div>
-              <h3>Web Applications</h3>
-              <p>
-                Functional web applications designed around your business
-                processes, users, and specific needs.
-              </p>
-            </article>
-          </div>
-        </section>
-
         {/* PORTFOLIO */}
        <section id="portfolio" className="portfolio-section scroll-reveal">
   <div className="section-heading">

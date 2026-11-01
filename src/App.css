@@ -65,7 +65,6 @@ body {
 }
 
 .brand-logo {
-.brand-logo {
   color: #0f172a;
   font-size: 20px; /* Reduced from 25px for a cleaner look */
   font-weight: 800;
@@ -1491,5 +1490,259 @@ body {
   }
   .testimonials-scroll-track {
     grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   1. STYLING THE MOBILE HAMBURGER MENU
+   ========================================= */
+@media (max-width: 768px) {
+  /* The dropdown / slide-out mobile menu container */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: linear-gradient(135deg, #07122b 0%, #030814 100%) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 24px 40px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* When the hamburger menu is active/open */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Style the navigation links inside the mobile menu */
+  .nav-menu a {
+    font-size: 17px;
+    font-weight: 500;
+    color: #e2e8f0;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s ease;
+  }
+
+  .nav-menu a:hover {
+    color: #38bdf8;
+  }
+
+  /* Special styling for the "Let's Talk" button inside mobile menu */
+  .nav-menu .mobile-cta-btn,
+  .nav-menu a.btn-primary {
+    margin-top: 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    border-radius: 9999px;
+    padding: 12px 20px;
+    border: none;
+    font-weight: 600;
+  }
+}
+
+/* =========================================
+   2. HERO BUTTONS SIDE-BY-SIDE ON MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+  .hero-biz-actions {
+    display: flex !important;
+    flex-direction: row !important; /* Forces side-by-side */
+    align-items: center;
+    justify-content: center;
+    gap: 10px !important;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    flex: 1 !important; /* Equal width distribution */
+    padding: 12px 8px !important;
+    font-size: 12.5px !important;
+    text-align: center;
+    border-radius: 9999px !important; /* Perfect rounded pill look */
+    white-space: nowrap;
+  }
+}
+/* =========================================
+   NEW HERO DARK GRID SECTION (Desktop & Mobile)
+   ========================================= */
+
+.hero-dark-grid {
+  position: relative;
+  background-color: #030816;
+  /* Dark Blue Tech Grid Background */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 15% 30%, rgba(29, 78, 216, 0.25) 0%, transparent 60%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  padding: 100px 24px 120px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+}
+
+/* DESKTOP LAYOUT (Left-Aligned) */
+.hero-content {
+  max-width: 780px;
+  text-align: left;
+}
+
+/* 5-Star Rating Pill */
+.hero-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 32px;
+}
+
+.hero-rating-badge .stars {
+  color: #fbbf24;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.hero-rating-badge .rating-text {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Heading */
+.hero-heading {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.hero-heading .highlight-text {
+  color: #38bdf8 !important;
+  font-weight: 400 !important;
+  display: block;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #94a3b8;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+/* Action Buttons */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary-pill {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary-pill:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-pill {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary-pill:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (Centered Layout)
+   ========================================= */
+@media (max-width: 768px) {
+  .hero-dark-grid {
+    padding: 60px 20px 80px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .hero-subtext {
+    font-size: 15px;
+    margin: 0 auto 32px;
+  }
+
+  /* Equal-width side-by-side buttons on mobile */
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 13.5px;
+    white-space: nowrap;
   }
 }
